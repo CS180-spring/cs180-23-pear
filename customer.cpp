@@ -7,12 +7,12 @@
 using namespace std;
 
 Customer::Customer(int id, string name, string address, int phoneNumber, int planId, string paymentMethod){
-    id = 0;
-    name = "";
-    address = "";
-    phoneNumber = 0;
-    planId = 0;
-    paymentMethod = "";
+    this->id = id;
+    this->name = name;
+    this->address = address;
+    this->phoneNumber = phoneNumber;
+    this->planId = planId;
+    this->paymentMethod = paymentMethod;
 }
 
 int Customer::getId() const{

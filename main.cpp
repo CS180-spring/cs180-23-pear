@@ -8,7 +8,15 @@
 using namespace std;
 
 void startMenu() {
+
+    string sname;
+    string address;
+    string payment;
+    int id;
+    int num;
+    int planId;
     int choice = -1;
+
     while(choice != 14) {
         cout << "=================================" << endl;
         cout << "Welcome to PearDB" << endl;
@@ -35,6 +43,22 @@ void startMenu() {
         cout << endl;
 
         if(choice == 1) {
+            
+            cout << "Enter Customer ID: ";
+            cin >> id;
+            cout << endl << "Enter Customer Name(First-Last): ";
+            cin >> sname;
+            cout << endl << "Enter Customer Address(State-City-ZIP-Street-Unit): ";
+            cin >> address;
+            cout << endl << "Enter Customer Phone Number(XXX-XXX-XXXX): ";
+            cin >> num;
+            cout << endl << "Enter Customer Payment Method(\"Visa, Master, Paypal, Stripe): ";
+            cin >> payment;
+            cout << "Enter Customer Plan Choice(1-3): ";
+            cin >> planId;
+
+            Customer(id, sname, address, num, planId, payment);
+            cout << sname << " has been added to the database!" << endl;
 
         }
 

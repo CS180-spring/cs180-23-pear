@@ -1,6 +1,6 @@
-#PearDB Menu
+# PearDB Menu
 
-##Main Menu
+## Main Menu
 1. Add a new customer
 2. View customer information
 3. Edit customer information
@@ -18,4 +18,4 @@
 
 Current Schema:
 
-Work in Progress ![image](https://user-images.githubusercontent.com/102573417/233097113-0aa7c2fa-8541-42a1-8964-0a0f25d35f86.png)
+![image](https://user-images.githubusercontent.com/102573417/233097113-0aa7c2fa-8541-42a1-8964-0a0f25d35f86.png)

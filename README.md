@@ -16,6 +16,6 @@
 13. Purchase a phone
 14. Exit
 
-Current Schema:
+### Current Schema:
 
 ![image](https://user-images.githubusercontent.com/102573417/233097113-0aa7c2fa-8541-42a1-8964-0a0f25d35f86.png)

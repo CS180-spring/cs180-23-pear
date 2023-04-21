@@ -12,10 +12,13 @@ void startMenu() {
     string sname;
     string address;
     string payment;
+    string temp;
     int id;
-    int num;
+    string num;
     int planId;
     int choice = -1;
+    vector<Customer> customerDB;
+    Customer obj;
 
     while(choice != 14) {
         cout << "=================================" << endl;
@@ -57,12 +60,29 @@ void startMenu() {
             cout << "Enter Customer Plan Choice(1-3): ";
             cin >> planId;
 
-            Customer(id, sname, address, num, planId, payment);
+            obj = Customer(id, sname, address, num, planId, payment);
+            customerDB.push_back(obj);
             cout << sname << " has been added to the database!" << endl;
 
         }
 
         else if(choice == 2) {
+            cout << "Please enter the customer ID: ";
+            cin >> id;
+            bool isTrue = false;
+
+            for(int i = 0; i < customerDB.size(); i++) {
+                obj = customerDB.at(i);
+                if(obj.getId() == id) {
+                    obj.display();
+                    cout << endl;
+                    isTrue = true;
+                }
+            }
+            if(isTrue == false) {
+            cout << "No customer found!" << endl;
+            cout << endl << endl;
+            }
 
         }
 

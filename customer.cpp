@@ -6,7 +6,16 @@
 
 using namespace std;
 
-Customer::Customer(int id, string name, string address, int phoneNumber, int planId, string paymentMethod){
+Customer::Customer() {
+    id = 0;
+    name = "";
+    address = "";
+    phoneNumber = "";
+    planId = 0;
+    paymentMethod = "";
+}
+
+Customer::Customer(int id, string name, string address, string phoneNumber, int planId, string paymentMethod){
     this->id = id;
     this->name = name;
     this->address = address;
@@ -27,7 +36,7 @@ string Customer::getAddress() const{
     return address;
 }
 
-int Customer::getPhoneNumber() const{
+string Customer::getPhoneNumber() const{
     return phoneNumber;
 }
 
@@ -47,7 +56,7 @@ void Customer::setAddress(string address){
     this->address = address;
 }
 
-void Customer::setPhoneNumber(int phoneNumber){
+void Customer::setPhoneNumber(string phoneNumber){
     this->phoneNumber = phoneNumber;
 }
 

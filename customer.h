@@ -11,22 +11,23 @@ class Customer {
         int id;
         string name;
         string address;
-        int phoneNumber;
+        string phoneNumber;
         int planId;
         string paymentMethod;
     public:
-        Customer(int id, string name, string address, int phoneNumber, int planId, string paymentMethod);
+        Customer();
+        Customer(int id, string name, string address, string phoneNumber, int planId, string paymentMethod);
 
         int getId() const;
         string getName() const;
         string getAddress() const;
-        int getPhoneNumber() const;
+        string getPhoneNumber() const;
         int getPlanId() const;
         string getPaymentMethod() const;
 
         void setName(string name);
         void setAddress(string address);
-        void setPhoneNumber(int phoneNumber);
+        void setPhoneNumber(string phoneNumber);
         void setPlanId(int planId);
         void setPaymentMethod(string paymentMethod);
 

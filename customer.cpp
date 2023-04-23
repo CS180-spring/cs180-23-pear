@@ -48,6 +48,10 @@ string Customer::getPaymentMethod() const{
     return paymentMethod;
 }
 
+void Customer::setID(int id) {
+    this->id = id;
+}
+
 void Customer::setName(string name){
     this->name = name;
 }

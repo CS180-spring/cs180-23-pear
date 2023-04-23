@@ -25,6 +25,7 @@ class Customer {
         int getPlanId() const;
         string getPaymentMethod() const;
 
+        void setID(int id);
         void setName(string name);
         void setAddress(string address);
         void setPhoneNumber(string phoneNumber);

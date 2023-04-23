@@ -1,9 +1,10 @@
 # PearDB Menu
 
 ## Main Menu
-1. Add a new customer
-2. View customer information
-3. Edit customer information
+1. Add a new customer // Need to change to customer file
+2. View customer information // Need to change to customer file
+3. Edit customer information // Need to change to customer file
+/*Work in Progress */
 4. Delete a customer
 5. Add a new phone
 6. View phone information

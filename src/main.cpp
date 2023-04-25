@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "customer.h"
+#include "../header/customer.h"
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
 

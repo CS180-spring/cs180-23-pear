@@ -12,6 +12,7 @@ ADD_EXECUTABLE(task-scheduler
 ADD_SUBDIRECTORY(googletest)
 ADD_EXECUTABLE(test
     src/test.cpp
+    src/customer.cpp
 )
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)

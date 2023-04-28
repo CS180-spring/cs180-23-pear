@@ -21,7 +21,7 @@ TEST(TaskConstructorTest, defaultConstructor){
 
 int main(int argc, char **argv) {
     Customer customer1 = Customer(561252, "Arthur","", "9515444343", 12222, "Visa");
-    testList.AddNewCustomer();
+    //customer1.AddNewCustomer();
     ::testing::InitGoogleTest(&argc, argv);
     int val = RUN_ALL_TESTS();
     allLists.clear();

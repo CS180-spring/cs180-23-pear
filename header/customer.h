@@ -2,7 +2,6 @@
 #define CUSTOMER_H
 
 #include <string>
-#include <vector>
 
 using namespace std;
 
@@ -14,18 +13,6 @@ class Customer {
         string phoneNumber;
         int planId;
         string paymentMethod;
-        string sname;
-        string address;
-        string payment;
-        string temp;
-        int id;
-        int tracker;
-        string num;
-        int planId;
-        int choice = -1;
-        int choice_two = -1;
-        vector<Customer> customerDB;
-        
     public:
         Customer();
         Customer(int id, string name, string address, string phoneNumber, int planId, string paymentMethod);
@@ -44,11 +31,9 @@ class Customer {
         void setPlanId(int planId);
         void setPaymentMethod(string paymentMethod);
 
+        void deleteCustomer(int id);
+
         void display() const;
-        void EditCustomer();
-        void AddNewCustomer();
-        void ViewCustomer();
-        void startMenu();
 
 };
 

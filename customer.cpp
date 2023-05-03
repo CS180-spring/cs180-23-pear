@@ -70,10 +70,6 @@ void Customer::setPaymentMethod(string paymentMethod){
     this->paymentMethod = paymentMethod;
 }
 
-void Customer::deleteCustomer(int id) {
-    
-}
-
 void Customer::display() const {
     cout << "Customer ID:" << id << endl;
     cout << "Name: " << name << endl;

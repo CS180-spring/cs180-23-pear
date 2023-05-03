@@ -30,9 +30,6 @@ class Customer {
         void setPhoneNumber(string phoneNumber);
         void setPlanId(int planId);
         void setPaymentMethod(string paymentMethod);
-
-        void deleteCustomer(int id);
-
         void display() const;
 
 };

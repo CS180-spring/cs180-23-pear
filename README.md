@@ -40,6 +40,6 @@ We implemented the customer functions and the phone class. We also set up google
 We plan to work on rapidJson technology. We want to learn more about it so we can implement our database system to interact with json files and store them even when the program stops running.
 
 ### Burndown chart:
-![image](https://raw.githubusercontent.com/CS180-spring/cs180-23-pear/main/burndown.png)
+![image](https://raw.githubusercontent.com/CS180-spring/cs180-23-pear/main/burnout%20chart.png)
 
 

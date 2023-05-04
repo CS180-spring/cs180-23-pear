@@ -11,7 +11,7 @@ class Plan {
         int planChoice;
         int phoneID;
         double planPrice;
-        int featurePrice;
+        double featurePrice;
     public:
         double getPlanPrice() const;
         double getFeaturePrice() const;

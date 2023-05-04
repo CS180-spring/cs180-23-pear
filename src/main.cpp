@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include "../header/customer.h"
+#include "../header/plan.h"
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
 
@@ -16,7 +17,9 @@ int planId;
 int choice = -1;
 int choice_two = -1;
 vector<Customer> customerDB;
-Customer obj;
+Customer obj, obj2;
+int planChoice;
+double planPrice;
 
 using namespace std;
 
@@ -131,6 +134,18 @@ void EditCustomer() {
     customerDB.at(tracker) = obj;
 }
 
+void AddNewPlan() {
+    cout << "Enter Plan ID: ";
+    cin >> planId;
+    cout << endl << "Enter Plan Choice: ";
+    cin >> planChoice;
+    cout << endl << "Enter Plan Price: ";
+    cin >> planPrice;
+
+    obj2 = Plan(id, sname, address, num, planId, payment);
+    customerDB.push_back(obj);
+    cout << endl << sname << " has been added to the database!" << endl;
+}
 
 void startMenu() {
 

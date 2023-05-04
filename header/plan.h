@@ -9,10 +9,11 @@ class Plan {
     private:
         string planName;
         int planChoice;
-        int phoneID;
         double planPrice;
         double featurePrice;
     public:
+        Plan();
+        Plan(int planChoice, double planPrice);
         double getPlanPrice() const;
         double getFeaturePrice() const;
 

@@ -13,7 +13,9 @@ class Plan {
         double featurePrice;
     public:
         Plan();
-        Plan(int planChoice, double planPrice);
+        Plan(int planId, string planName, int planChoice, double planPrice);
+        double getPlanChoice() const;
+        string getPlanName() const;
         double getPlanPrice() const;
         double getFeaturePrice() const;
 

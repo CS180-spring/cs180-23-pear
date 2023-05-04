@@ -9,14 +9,15 @@ vector<Customer> allLists;
 Customer staticCustomer = Customer(234156, "Trevor","", "9515588585", 24324, "Master");
 Customer customer2 = Customer(33345554, "Josue","", "9512234398", 11345, "Visa");
 
-TEST(TaskConstructorTest, defaultConstructor){
-    Customer test = Customer(234156, "Trevor","", "9515588585", 24324, "Master");
-    EXPECT_EQ(test.getId(), 561252);
-    EXPECT_EQ(test.getName(), "");
-    EXPECT_EQ(test.getAddress(), "");
-    EXPECT_EQ(test.getPhoneNumber(), 9515444343);
-    EXPECT_EQ(test.getPlanId(), 12222);
-    EXPECT_EQ(test.getPaymentMethod(), "Visa");
+TEST(TaskConstructorTest, AddNewCustomer){
+    Customer *test = new Customer(234156, "Trevor","", "9515588585", 24324, "Master");
+    EXPECT_EQ(test->getId(), 561252);
+    EXPECT_EQ(test->getName(), "");
+    EXPECT_EQ(test->getAddress(), "");
+    EXPECT_EQ(test->getPhoneNumber(), "");
+    EXPECT_EQ(test->getPlanId(), 12222);
+    EXPECT_EQ(test->getPaymentMethod(), "Visa");
+    delete test;
 }
 
 int main(int argc, char **argv) {

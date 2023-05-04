@@ -17,7 +17,9 @@ int planId;
 int choice = -1;
 int choice_two = -1;
 vector<Customer> customerDB;
-Customer obj, obj2;
+vector<Plan> planDB;
+Customer obj;
+Plan obj2;
 int planChoice;
 double planPrice;
 
@@ -142,9 +144,28 @@ void AddNewPlan() {
     cout << endl << "Enter Plan Price: ";
     cin >> planPrice;
 
-    obj2 = Plan(id, sname, address, num, planId, payment);
-    customerDB.push_back(obj);
+    obj2 = Plan(planChoice, planPrice);
+    planDB.push_back(obj2);
     cout << endl << sname << " has been added to the database!" << endl;
+}
+
+void PrintPlan() {
+    cout << "Please enter the plan ID: ";
+    cin >> planId;
+    bool isTrue = false;
+
+    for(int i = 0; i < customerDB.size(); i++) {
+        obj2 = planDB.at(i);
+        if(obj2.getPlanChoice() == id) {
+            obj2.printCurrPlan();
+            cout << endl;
+            isTrue = true;
+        }
+    }
+    if(isTrue == false) {
+    cout << "No plan found!" << endl;
+    cout << endl << endl;
+    }
 }
 
 void startMenu() {
@@ -215,11 +236,11 @@ void startMenu() {
         }
 
         else if(choice == 9) {
-            
+            AddNewPlan();
         }
 
         else if(choice == 10) {
-            
+            PrintPlan();
         }
 
         else if(choice == 11) {

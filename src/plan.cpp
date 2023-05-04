@@ -1,4 +1,4 @@
-#include "plan.h"
+#include "../header/plan.h"
 #include <iostream>
 
 
@@ -14,6 +14,10 @@ Plan::Plan(int planChoice, double planPrice){
 
 double Plan::getPlanPrice() const {
     return planPrice;
+}
+
+double Plan::getPlanChoice() const {
+    return planChoice;
 }
 
 double Plan::getFeaturePrice() const {
@@ -32,8 +36,9 @@ void Plan::setFeaturePrice(double planPrice) {
     this->featurePrice = featurePrice;
 }
 
-void printCurrPlan() {
-
+void Plan::printCurrPlan() {
+    cout << "Plan Choice:" << planChoice << endl;
+    cout << "Plan Price: " << planPrice << endl;
 }
 
 void printPrevPlan() {

@@ -37,7 +37,7 @@ We worked on the customer class and testing the functions. We also created the m
 We implemented the customer functions and the phone class. We also set up google test for unit testing.
 <br>
 Burndown chart:
-![image](Burndown.png)
+![image](burndown.png)
 
 ### Final Deliverable
 

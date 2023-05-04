@@ -37,7 +37,7 @@ We worked on the customer class and testing the functions. We also created the m
 We implemented the customer functions and the phone class. We also set up google test for unit testing.
 <br>
 Burndown chart:
-![image](burndown.png)
+![image](https://raw.githubusercontent.com/CS180-spring/cs180-23-pear/main/burndown.png)
 
 ### Final Deliverable
 

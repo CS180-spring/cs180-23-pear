@@ -15,6 +15,7 @@ class Phone {
         double phonePrice;
         bool availibility;
     public:
+        Phone();
         string getMake() const;
         string getModel() const;
         string getStorage() const;
@@ -30,6 +31,8 @@ class Phone {
         void setPhoneID(int phoneID);
         void setPhonePrice(double price);
         void setAvail(bool availibility);
+
+        void display();
 };
 
 

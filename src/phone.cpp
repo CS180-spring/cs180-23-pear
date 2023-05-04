@@ -1,6 +1,16 @@
 #include "phone.h"
 #include <iostream>
 
+Phone::Phone() {
+    make = "";
+    model = "";
+    storage = "";
+    color = "";
+    phoneID = 0;
+    phonePrice = 0;
+    availibility = true;
+}
+
 string Phone::getMake() const {
     return make;
 }
@@ -43,4 +53,14 @@ void Phone::setPhonePrice(double price) {
 }
 void Phone::setAvail(bool availibility) {
     this->availibility = availibility;
+}
+
+void Phone::display() {
+    cout << "Phone ID:" << phoneID << endl;
+    cout << "Make: " << make << endl;
+    cout << "Model: " << model << endl;
+    cout << "Storage: " << storage << endl;
+    cout << "Color: " << color << endl;
+    cout << "Price: " << phonePrice << endl;
+    cout << "Availibility: " << availibility;
 }

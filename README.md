@@ -35,14 +35,11 @@ We worked on the customer class and testing the functions. We also created the m
 
 ### Week 4
 We implemented the customer functions and the phone class. We also set up google test for unit testing.
-<br>
-Burndown chart:
+
+### Week 5
+We plan to work on rapidJson technology. We want to learn more about it so we can implement our database system to interact with json files and store them even when the program stops running.
+
+###Burndown chart:
 ![image](https://raw.githubusercontent.com/CS180-spring/cs180-23-pear/main/burndown.png)
 
-### Final Deliverable
 
-### Screenshots
-
-### Installing
-
-### Testing

@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "customer.h"
+#include "../header/customer.h"
+#include "../header/phone.h"
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
 
@@ -15,8 +16,12 @@ string num;
 int planId;
 int choice = -1;
 int choice_two = -1;
+int var;
+char choice_three;
 vector<Customer> customerDB;
+vector<Phone> phoneDB;
 Customer obj;
+Phone phone;
 
 using namespace std;
 
@@ -131,6 +136,151 @@ void EditCustomer() {
     customerDB.at(tracker) = obj;
 }
 
+void AddNewPhone() {
+    cout << "Enter Phone ID: ";
+    cin >> var;
+    phone.setPhoneID(var);
+    cout << "Enter Phone Price: ";
+    cin >> var;
+    phone.setPhonePrice(var);
+    cout << "Enter Make: ";
+    cin >> temp;
+    phone.setMake(temp);
+    cout << "Enter Model: ";
+    cin >> temp;
+    phone.setModel(temp);
+    cout << "Enter Storage: ";
+    cin >> temp;
+    phone.setStorage(temp);
+    cout << "Enter Color: ";
+    cin >> temp;
+    phone.setColor(temp);
+    phoneDB.push_back(phone);
+
+    cout << phone.getMake() << " " << phone.getModel() << " has been added to the database!";
+}
+
+void EditPhone() {
+    cout << "Please enter the Phone ID: ";
+    cin >> id;
+    bool isTrue = false;
+
+    for(int i = 0; i < phoneDB.size(); i++) {
+        phone = phoneDB.at(i);
+        if(phone.getPhoneID() == id) {
+            tracker = i;
+            isTrue = true;
+            break;
+        }
+    }
+    if(isTrue == false) {
+        cout << "No Phone found!" << endl;
+        cout << endl << endl;
+        return;
+    }
+
+    while(choice_two != 8) {
+        cout << endl << "Please choose an attribute(number) to edit: " << endl;
+        cout << "1. Change ID " << endl;
+        cout << "2. Change Make " << endl;
+        cout << "3. Change Model " << endl;
+        cout << "4. Change Storage " << endl;
+        cout << "5. Change Color " << endl;
+        cout << "6. Change Price " << endl;
+        cout << "7. Change Availibility" << endl;
+        cout << "8. Return" << endl;
+
+        cin >> choice_two;
+        while(choice_two < 1 || choice_two > 8) {
+            cout << "Invalid Option!" << endl;
+            cin >> choice_two;
+        }
+
+        if(choice_two == 1) {
+            cout << "Enter New Phone ID: ";
+            cin >> id;
+            cout << endl << phone.getMake() << " " << phone.getModel() << "'s New Customer ID is ";
+            phone.setPhoneID(id);
+            cout << phone.getPhoneID() << endl;
+        }
+        if(choice_two == 2) {
+            cout << "Enter Phone Make: ";
+            cin >> temp;
+            cout << endl << phone.getMake() << " " << phone.getModel() << "'s New Make is ";
+            phone.setMake(temp);
+            cout << phone.getMake() << endl;
+        }
+        if(choice_two == 3) {
+            cout << "Enter New Model: ";
+            cin >> temp;
+            cout << endl << phone.getMake() << " " << phone.getModel() << "'s New Model is ";
+            phone.setModel(temp);
+            cout << phone.getModel() << endl;
+        }
+        if(choice_two == 4) {
+            cout << "Enter New Storage: ";
+            cin >> temp;
+            cout << endl << phone.getMake() << " " << phone.getModel() << "'s New Storage is ";
+            phone.setStorage(temp);
+            cout << phone.getStorage() << endl;
+        }
+        if(choice_two == 5) {
+            cout << "Enter New Color: ";
+            cin >> temp;
+            cout << endl << phone.getMake() << " " << phone.getModel() << "'s New Color is ";
+            phone.setColor(temp);
+            cout << phone.getColor() << endl;
+        }
+        if(choice_two == 6) {
+            cout << "Enter New Price: ";
+            cin >> var;
+            cout << endl << phone.getMake() << " " << phone.getModel() << "'s New Price is ";
+            phone.setPhonePrice(var);
+            cout << phone.getPhonePrice() << endl;
+        }
+        if(choice_two == 7) {
+            cout << "Enter New Availibility Status('Y' for Availible, 'N' for Occupied): ";
+            cin >> choice_three;
+            while(choice_three != 'Y' || choice_three != 'N') {
+                cout << "Invalid Option!" << endl;
+                cout << "Enter Y/N: ";
+                cin >> choice_three;
+                cout << endl;
+            }
+            cout << phone.getMake() << " " << phone.getModel() << "'s New Availibility is ";
+            if(choice_three == 'Y') {
+                phone.setAvail(true);
+                cout << "Availibile" << endl;
+            }
+            if(choice_three == 'N') {
+                phone.setAvail(false);
+                cout << "Occupied" << endl;
+            }
+        }
+    }
+
+    phoneDB.at(tracker) = phone;
+}
+
+void ViewPhone() {
+    cout << "Please enter the Phone ID: ";
+    cin >> id;
+    bool isTrue = false;
+
+    for(int i = 0; i < phoneDB.size(); i++) {
+        phone = phoneDB.at(i);
+        if(phone.getPhoneID() == id) {
+            phone.display();
+            cout << endl;
+            isTrue = true;
+        }
+    }
+    if(isTrue == false) {
+    cout << "No phone found!" << endl;
+    cout << endl << endl;
+    }
+}
+
 
 void startMenu() {
 
@@ -184,11 +334,11 @@ void startMenu() {
         }
 
         else if(choice == 5) {
-            
+            AddNewPhone();
         }
 
         else if(choice == 6) {
-            
+            ViewPhone();
         }
 
         else if(choice == 7) {

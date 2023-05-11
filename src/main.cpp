@@ -174,7 +174,7 @@ void EditPlan() {
 
     for(int i = 0; i < planDB.size(); i++) {
         plan = planDB.at(i);
-        if(plan.getPlanId() == id) {
+        if(plan.getPlId() == id) {
             tracker = i;
             isTrue = true;
             break;
@@ -212,8 +212,8 @@ void EditPlan() {
             cout << "Enter New Plan ID: ";
             cin >> newId;
             cout << endl << plan.getPlanName() << "'s New Plan ID is ";
-            plan.setPlanId(newId);
-            cout << plan.getPlanId() << endl;
+            plan.setPlId(newId);
+            cout << plan.getPlId() << endl;
         }
         if(choice_two == 2) {
             cout << "Enter Plan ID: ";
@@ -297,7 +297,7 @@ void PrintPlan() {
 
     for(int i = 0; i < planDB.size(); i++) {
         plan = planDB.at(i);
-        if(plan.getPlanId() == planId) {
+        if(plan.getPlId() == planId) {
             plan.printCurrPlan();
             cout << endl;
             isTrue = true;
@@ -385,7 +385,7 @@ void startMenu() {
         }
 
         else if(choice == 11) {
-            
+            EditPlan();
         }
 
         else if(choice == 12) {

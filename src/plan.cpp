@@ -47,7 +47,7 @@ int Plan::getPlanChoice() const {
     return planChoice;
 }
 
-int Plan::getPlanId() const {
+int Plan::getPlId() const {
     return planId;
 }
 
@@ -63,15 +63,11 @@ string Plan::getStartDate() const {
     return startDate;
 }
 
-void Plan::updatePlanPrice(double priceChange) {
-    this->planPrice += priceChange;
-}
-
 void Plan::setPlanPrice(double planPrice) {
     this->planPrice = planPrice;
 }
 
-void Plan::setPlanId(int planId) {
+void Plan::setPlId(int planId) {
     this->planId = planId;
 }
 

@@ -26,7 +26,7 @@ class Plan {
         Plan();
         Plan(int planId, string planName, string startDate, string endDate, int planChoice, double planPrice, double minuteAll, double textAll, double dataAll);
         int getPlanChoice() const;
-        int getPlanId() const;
+        int getPlId() const;
         string getPlanName() const;
         string getStartDate() const;
         string getEndDate() const;
@@ -35,12 +35,10 @@ class Plan {
         double getTextAllowance() const;
         double getDataAllowance() const;
 
-
-        void updatePlanPrice(double priceChange);
         void setPlanPrice(double planPrice);
         void setPlanName(string planName);
         void setPlanChoice(int planChoice);
-        void setPlanId(int planId);
+        void setPlId(int planId);
         void setStartDate(string startDate);
         void setEndDate(string endDate);
         void setMinuteAllowance(double minuteAll);

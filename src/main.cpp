@@ -174,7 +174,7 @@ void EditPlan() {
 
     for(int i = 0; i < planDB.size(); i++) {
         plan = planDB.at(i);
-        if(plan.getPlId() == id) {
+        if(plan.getPlId() == planId) {
             tracker = i;
             isTrue = true;
             break;

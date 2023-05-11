@@ -9,9 +9,9 @@ Plan::Plan() {
     double textAll = 0.0;
     double dataAll = 0.0;
     string planName = "";
-    string startDate = "0000 01 01";
-    string endDate = "0000 01 01";
-    string contractLength = "0000 01 01";
+    string startDate = "0000-01-01";
+    string endDate = "0000-01-01";
+    string contractLength = "0 years 0 days";
     int planId = 0;
 }
 
@@ -87,6 +87,18 @@ void Plan::setEndDate(string endDate) {
     this->endDate = endDate;
 }
 
+void Plan::setDataAllowance(double dataAll) {
+    this->dataAll = dataAll;
+}
+
+void Plan::setMinuteAllowance(double minuteAll) {
+    this->minuteAll = minuteAll;
+}
+
+void Plan::setTextAllowance(double textAll) {
+    this->textAll = textAll;
+}
+
 /*void Plan::calculatePeriod() {
     string start, end;
     start = "0000 01 01";
@@ -124,4 +136,9 @@ void Plan::printCurrPlan() {
     cout << "Plan Id:" << planId << endl;
     cout << "Plan Choice:" << planChoice << endl;
     cout << "Plan Price: " << planPrice << endl;
+    cout << "Plan Start Date: " << startDate << endl;
+    cout << "Plan End Date: " << endDate << endl;
+    cout << "Plan Minute Allowance: " << minuteAll << endl;
+    cout << "Plan Text Allowance: " << textAll << endl;
+    cout << "Plan Data Allowance: " << dataAll << endl;
 }

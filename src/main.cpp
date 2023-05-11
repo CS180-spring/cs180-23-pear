@@ -206,8 +206,8 @@ void EditPlan() {
         }
 
         if(choice_two == 1) {
-            cout << "Enter current Plan ID: ";
-            cin >> planId;
+            cout << "Current Plan ID is: ";
+            cout << plan.getPlId();
             int newId;
             cout << "Enter New Plan ID: ";
             cin >> newId;
@@ -216,8 +216,8 @@ void EditPlan() {
             cout << plan.getPlId() << endl;
         }
         if(choice_two == 2) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
+            cout << "Current Plan Name is: ";
+            cout << plan.getPlanName();
             cout << "Enter New Plan Name: ";
             cin >> planName;
             cout << endl << plan.getPlanName() << "'s New Plan Name is ";
@@ -225,60 +225,58 @@ void EditPlan() {
             cout << plan.getPlanName() << endl;
         }
         if(choice_two == 3) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
-            cout << "Enter New Plan Choice: ";
+            cout << "Current Plan Choice is: ";
+            cout << plan.getPlanChoice();
+            cout << "Enter New Plan Choice (1-3): ";
             cin >> planChoice;
             cout << endl << plan.getPlanName() << "'s New Plan Choice is ";
             plan.setPlanChoice(planChoice);
             cout << plan.getPlanChoice() << endl;
         }
         if(choice_two == 4) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
-            cout << "Enter Start Date: ";
+            cout << "Current Plan Start Date is: ";
+            cout << plan.getStartDate();
+            cout << "Enter New Start Date: ";
             cin >> startDate;
             cout << endl << plan.getPlanName() << "'s New Start Date is ";
             plan.setStartDate(startDate);
             cout << plan.getStartDate() << endl;
         }
         if(choice_two == 5) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
-            cout << "Enter End Date: ";
+            cout << "Current Plan End Date is: ";
+            cout << plan.getEndDate();
+            cout << "Enter New End Date: ";
             cin >> endDate;
             cout << endl << plan.getPlanName() << "'s New End Date is ";
             plan.setEndDate(endDate);
             cout << plan.getEndDate() << endl;
         }
         if(choice_two == 6) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
             //cout << endl << plan.calculatePeriod() << "'s Contract Length is ";
             //cout << plan.calculatePeriod() << endl;
         }
         if(choice_two == 7) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
-            cout << "Enter Minute Allowance: ";
+            cout << "Current Plan Minute Allowance is: ";
+            cout << plan.getMinuteAllowance();
+            cout << "Enter New Minute Allowance: ";
             cin >> minAll;
             cout << endl << plan.getPlanName() << "'s New Minute Allowance is ";
             plan.setMinuteAllowance(minAll);
             cout << plan.getMinuteAllowance() << endl;
         }
         if(choice_two == 8) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
-            cout << "Enter Text Allowance: ";
+            cout << "Current Plan Text Allowance is: ";
+            cout << plan.getStartDate();
+            cout << "Enter New Text Allowance: ";
             cin >> minAll;
             cout << endl << plan.getPlanName() << "'s New Text Allowance is ";
             plan.setTextAllowance(minAll);
             cout << plan.getTextAllowance() << endl;
         }
         if(choice_two == 9) {
-            cout << "Enter Plan ID: ";
-            cin >> planId;
-            cout << "Enter Data Allowance: ";
+            cout << "Current Plan Data Allowance is: ";
+            cout << plan.getDataAllowance();
+            cout << "Enter New Data Allowance: ";
             cin >> minAll;
             cout << endl << plan.getPlanName() << "'s New Data Allowance is ";
             plan.setDataAllowance(minAll);

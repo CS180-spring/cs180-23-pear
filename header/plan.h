@@ -45,7 +45,7 @@ class Plan {
         void setTextAllowance(double textAll);
         void setDataAllowance(double dataAll);
         
-        void calculatePeriod();
+        void calculatePeriod(string start, string end);
         void printCurrPlan();
 };
 

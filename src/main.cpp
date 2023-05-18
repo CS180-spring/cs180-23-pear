@@ -151,9 +151,9 @@ void AddNewPlan() {
     cin >> planChoice;
     cout << "Enter Plan Price: ";
     cin >> planPrice;
-    cout << "Enter Plan Start Date: ";
+    cout << "Enter Plan Start Date (MM-DD-YYYY): ";
     cin >> startDate;
-    cout << "Enter Plan End Date: ";
+    cout << "Enter Plan End Date (MM-DD-YYYY): ";
     cin >> endDate;
     cout << "Enter Minute Allowance: ";
     cin >> minAll;
@@ -161,7 +161,7 @@ void AddNewPlan() {
     cin >> textAll;
     cout << "Enter Data Allowance: ";
     cin >> dataAll;
-
+    //plan.calculatePeriod(plan.getStartDate(), plan.getEndDate());
     plan = Plan(planId, planName, startDate, endDate, planChoice, planPrice, minAll, textAll, dataAll);
     planDB.push_back(plan);
     cout << endl << planName << " has been added to the database!" << endl;
@@ -186,18 +186,17 @@ void EditPlan() {
         return;
     }
 
-    while(choice_two != 10) {
+    while(choice_two < 9 && choice_two > 0) {
         cout << endl << "Please choose an attribute(number) to edit: " << endl;
         cout << "1. Change ID " << endl;
         cout << "2. Change Name " << endl;
         cout << "3. Change Choice " << endl;
         cout << "4. Plan Start Date " << endl;
         cout << "5. Plan End Date " << endl;
-        cout << "6. Contract Length " << endl;
-        cout << "7. Minute Allowance " << endl;
-        cout << "8. Text Allowance " << endl;
-        cout << "9. Data Allowance " << endl;
-        cout << "10. Return" << endl;
+        cout << "6. Minute Allowance " << endl;
+        cout << "7. Text Allowance " << endl;
+        cout << "8. Data Allowance " << endl;
+        cout << "9. Return" << endl;
 
         cin >> choice_two;
         while(choice_two < 1 || choice_two > 10) {
@@ -241,6 +240,7 @@ void EditPlan() {
             cout << endl << plan.getPlanName() << "'s New Start Date is ";
             plan.setStartDate(startDate);
             cout << plan.getStartDate() << endl;
+            //plan.calculatePeriod(plan.getStartDate(), plan.getEndDate());
         }
         if(choice_two == 5) {
             cout << "Current Plan End Date is: ";
@@ -250,12 +250,9 @@ void EditPlan() {
             cout << endl << plan.getPlanName() << "'s New End Date is ";
             plan.setEndDate(endDate);
             cout << plan.getEndDate() << endl;
+            //plan.calculatePeriod(plan.getStartDate(), plan.getEndDate());
         }
         if(choice_two == 6) {
-            //cout << endl << plan.calculatePeriod() << "'s Contract Length is ";
-            //cout << plan.calculatePeriod() << endl;
-        }
-        if(choice_two == 7) {
             cout << "Current Plan Minute Allowance is: ";
             cout << plan.getMinuteAllowance();
             cout << "Enter New Minute Allowance: ";
@@ -264,7 +261,7 @@ void EditPlan() {
             plan.setMinuteAllowance(minAll);
             cout << plan.getMinuteAllowance() << endl;
         }
-        if(choice_two == 8) {
+        if(choice_two == 7) {
             cout << "Current Plan Text Allowance is: ";
             cout << plan.getStartDate();
             cout << "Enter New Text Allowance: ";
@@ -273,7 +270,7 @@ void EditPlan() {
             plan.setTextAllowance(minAll);
             cout << plan.getTextAllowance() << endl;
         }
-        if(choice_two == 9) {
+        if(choice_two == 8) {
             cout << "Current Plan Data Allowance is: ";
             cout << plan.getDataAllowance();
             cout << "Enter New Data Allowance: ";

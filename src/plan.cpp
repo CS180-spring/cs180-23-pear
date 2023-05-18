@@ -1,6 +1,8 @@
 #include "../header/plan.h"
 #include <iostream>
 
+using namespace std;
+
 
 Plan::Plan() {
     int planChoice = 0;
@@ -9,9 +11,8 @@ Plan::Plan() {
     double textAll = 0.0;
     double dataAll = 0.0;
     string planName = "";
-    string startDate = "0000-01-01";
-    string endDate = "0000-01-01";
-    string contractLength = "0 years 0 days";
+    string startDate = "01-01-0000";
+    string endDate = "01-01-0000";
     int planId = 0;
 }
 
@@ -99,36 +100,98 @@ void Plan::setTextAllowance(double textAll) {
     this->textAll = textAll;
 }
 
-/*void Plan::calculatePeriod() {
-    string start, end;
-    start = "0000 01 01";
-    cout << start;
-    end = "0000 01 01";
-    cout << end;
-
-    tm tm_start_date = {};
-    tm tm_end_date = {};
-    istringstream ss_start_date("0000 01 01");
-    istringstream ss_end_date("0000-01-01");
-    ss_start_date >> get_time(&tm_start_date, "%Y-%m-%d");
-    ss_end_date >> get_time(&tm_end_date, "%Y-%m-%d");
-    time_t start_time = mktime(&tm_start_date);
-    time_t end_time = mktime(&tm_end_date);
-
-    // Calculate the period between the two dates
-    chrono::duration<double> duration = chrono::duration_cast<chrono::duration<double>>(chrono::seconds(end_time - start_time));
-    int total_days = duration.count() / (60 * 60 * 24);
-    int years = total_days / 365;
-    int days = total_days % 365;
-
-    // Convert the period to a string
+/*void Plan::calculatePeriod(string start, string end) {
+    int years = 0, months = 0, days = 0;
     string period = "";
+    int monthsDays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    // Convert the period to a string
+    int d1, m1, y1, d2, m2, y2;
+    cout << "start here@@@@@@@@" << endl;
+    string tempVar;
+    tempVar = start.substr(0,2);
+    cout << tempVar << endl;
+    d1 = stoi(start.substr(0,2));
+    cout << d1 << endl;
+    m1 = stoi(start.substr(3,5));
+    cout << m1 << endl;
+    y1 = stoi(start.substr(6,9));
+    cout << y1 << endl;
+    d2 = stoi(end.substr(0,2));
+    cout << d2 << endl;
+    m2 = stoi(end.substr(3,5));
+    cout << m2 << endl;
+    y2 = stoi(end.substr(6,9));
+    cout << y2 << endl;
+
+    cout << d1 << " " << m1 << " " << y1 << " " << d2 << " " << m2 << " " << y2;
+
+    /*if(y1%4 == 0) {
+        if(y2%4 == 0) {
+            if (m1 < 2) {
+                days++;
+            }
+            if (m2 > 2) {
+                days++;
+            }
+            if (y2 - y1 > 0) {
+                days+= 365 * (y2 - y1);
+            }
+        }
+    }*/
+
+    /*if(y1 == y2) {
+        months = m2 - m1;
+        if (d2 < d1) {
+            months--;
+        }
+        if(y1 % 4 == 0 && y1 % 100 != 0) {
+            days ++;
+        }
+        if (y1 % 400 == 0) {
+            days++;
+        }
+    
+    }
+    else {
+        if(y1 % 4 == 0 && m2 > 2) {
+            days--;
+        }
+        while (y1 != y2) {
+            years++;
+            if(y1 % 4 == 0 && y1 % 100 != 0) {
+                days ++;
+            }
+            if (y1 % 400 == 0) {
+                days++;
+            }
+            y1++;
+        }
+        /*if (y2 % 4 == 0 && y2 % 100 != 0 && (m2 == 1 || (m2 == 2 && days < 29))) {
+            days--;
+        }*/
+        /*if (m1 > m2 || (m1 == m2 && d1 > d2)) {
+            years--;
+            months = (12 - m1) + m2;
+        }
+        else {
+            months = m2 - m1;
+        }
+        if (d1 > d2) {
+            days = monthsDays[m1-1] - d1 + d2;
+        }
+        else {
+            days = d1 - d2;
+        }
+    }
+
     if (years > 0) {
-        period = to_string(years) + " years and " + to_string(days) + " days";
-    } else {
-        period = to_string(days) + " days";
+        period = to_string(years) + " year(s) and " + to_string(months) + " month(s) " + to_string(days) + " day(s)";
+    } 
+    else {
+        period = to_string(days) + " day(s)";
     }
     this->contractLength = period;
+    cout << period << endl;
 }*/
 
 void Plan::printCurrPlan() {
@@ -138,6 +201,7 @@ void Plan::printCurrPlan() {
     cout << "Plan Price: " << planPrice << endl;
     cout << "Plan Start Date: " << startDate << endl;
     cout << "Plan End Date: " << endDate << endl;
+    cout << "Contract Period: " << contractLength << endl;
     cout << "Plan Minute Allowance: " << minuteAll << endl;
     cout << "Plan Text Allowance: " << textAll << endl;
     cout << "Plan Data Allowance: " << dataAll << endl;

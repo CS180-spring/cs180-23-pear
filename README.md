@@ -44,6 +44,6 @@ We plan to work on rapidJson technology. We want to learn more about it so we ca
 We are having a few setbacks due to conflicting schedules so we are a bit behind schedule but the plan is to catch up on the work for this week and get rapidjson up and working with the main code.
 
 ### Burndown chart:
-![image](https://raw.githubusercontent.com/CS180-spring/cs180-23-pear/main/burndown/burndown5-11.png))
+![image](https://raw.githubusercontent.com/CS180-spring/cs180-23-pear/main/burndown/burndown-may18.png))
 
 

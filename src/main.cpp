@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include "../header/customer.h"
+#include "../header/plan.h"
 #include "../header/phone.h"
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
@@ -10,17 +11,27 @@ string sname;
 string address;
 string payment;
 string temp;
+string startDate;
+string endDate;
 int id;
 int tracker;
 string num;
 int planId;
+string planName;
 int choice = -1;
 int choice_two = -1;
 int var;
 char choice_three;
 vector<Customer> customerDB;
+vector<Plan> planDB;
 vector<Phone> phoneDB;
 Customer obj;
+Plan plan;
+int planChoice;
+double planPrice;
+double minAll;
+double textAll;
+double dataAll;
 Phone phone;
 
 using namespace std;
@@ -281,6 +292,167 @@ void ViewPhone() {
     }
 }
 
+void AddNewPlan() {
+    cout << "Enter Plan ID: ";
+    cin >> planId;
+    cout << "Enter Plan Name: ";
+    cin >> planName;
+    cout << "Enter Plan Choice: ";
+    cin >> planChoice;
+    cout << "Enter Plan Price: ";
+    cin >> planPrice;
+    cout << "Enter Plan Start Date (MM-DD-YYYY): ";
+    cin >> startDate;
+    cout << "Enter Plan End Date (MM-DD-YYYY): ";
+    cin >> endDate;
+    cout << "Enter Minute Allowance: ";
+    cin >> minAll;
+    cout << "Enter Text Allowance: ";
+    cin >> textAll;
+    cout << "Enter Data Allowance: ";
+    cin >> dataAll;
+    //plan.calculatePeriod(plan.getStartDate(), plan.getEndDate());
+    plan = Plan(planId, planName, startDate, endDate, planChoice, planPrice, minAll, textAll, dataAll);
+    planDB.push_back(plan);
+    cout << endl << planName << " has been added to the database!" << endl;
+}
+
+void EditPlan() {
+    cout << "Please enter the Plan ID: ";
+    cin >> planId;
+    bool isTrue = false;
+
+    for(int i = 0; i < planDB.size(); i++) {
+        plan = planDB.at(i);
+        if(plan.getPlId() == planId) {
+            tracker = i;
+            isTrue = true;
+            break;
+        }
+    }
+    if(isTrue == false) {
+        cout << "No Plan found!" << endl;
+        cout << endl << endl;
+        return;
+    }
+
+    while(choice_two < 9 && choice_two > 0) {
+        cout << endl << "Please choose an attribute(number) to edit: " << endl;
+        cout << "1. Change ID " << endl;
+        cout << "2. Change Name " << endl;
+        cout << "3. Change Choice " << endl;
+        cout << "4. Plan Start Date " << endl;
+        cout << "5. Plan End Date " << endl;
+        cout << "6. Minute Allowance " << endl;
+        cout << "7. Text Allowance " << endl;
+        cout << "8. Data Allowance " << endl;
+        cout << "9. Return" << endl;
+
+        cin >> choice_two;
+        while(choice_two < 1 || choice_two > 10) {
+            cout << "Invalid Option!" << endl;
+            cin >> choice_two;
+        }
+
+        if(choice_two == 1) {
+            cout << "Current Plan ID is: ";
+            cout << plan.getPlId();
+            int newId;
+            cout << "Enter New Plan ID: ";
+            cin >> newId;
+            cout << endl << plan.getPlanName() << "'s New Plan ID is ";
+            plan.setPlId(newId);
+            cout << plan.getPlId() << endl;
+        }
+        if(choice_two == 2) {
+            cout << "Current Plan Name is: ";
+            cout << plan.getPlanName();
+            cout << "Enter New Plan Name: ";
+            cin >> planName;
+            cout << endl << plan.getPlanName() << "'s New Plan Name is ";
+            plan.setPlanName(planName);
+            cout << plan.getPlanName() << endl;
+        }
+        if(choice_two == 3) {
+            cout << "Current Plan Choice is: ";
+            cout << plan.getPlanChoice();
+            cout << "Enter New Plan Choice (1-3): ";
+            cin >> planChoice;
+            cout << endl << plan.getPlanName() << "'s New Plan Choice is ";
+            plan.setPlanChoice(planChoice);
+            cout << plan.getPlanChoice() << endl;
+        }
+        if(choice_two == 4) {
+            cout << "Current Plan Start Date is: ";
+            cout << plan.getStartDate();
+            cout << "Enter New Start Date: ";
+            cin >> startDate;
+            cout << endl << plan.getPlanName() << "'s New Start Date is ";
+            plan.setStartDate(startDate);
+            cout << plan.getStartDate() << endl;
+            //plan.calculatePeriod(plan.getStartDate(), plan.getEndDate());
+        }
+        if(choice_two == 5) {
+            cout << "Current Plan End Date is: ";
+            cout << plan.getEndDate();
+            cout << "Enter New End Date: ";
+            cin >> endDate;
+            cout << endl << plan.getPlanName() << "'s New End Date is ";
+            plan.setEndDate(endDate);
+            cout << plan.getEndDate() << endl;
+            //plan.calculatePeriod(plan.getStartDate(), plan.getEndDate());
+        }
+        if(choice_two == 6) {
+            cout << "Current Plan Minute Allowance is: ";
+            cout << plan.getMinuteAllowance();
+            cout << "Enter New Minute Allowance: ";
+            cin >> minAll;
+            cout << endl << plan.getPlanName() << "'s New Minute Allowance is ";
+            plan.setMinuteAllowance(minAll);
+            cout << plan.getMinuteAllowance() << endl;
+        }
+        if(choice_two == 7) {
+            cout << "Current Plan Text Allowance is: ";
+            cout << plan.getStartDate();
+            cout << "Enter New Text Allowance: ";
+            cin >> minAll;
+            cout << endl << plan.getPlanName() << "'s New Text Allowance is ";
+            plan.setTextAllowance(minAll);
+            cout << plan.getTextAllowance() << endl;
+        }
+        if(choice_two == 8) {
+            cout << "Current Plan Data Allowance is: ";
+            cout << plan.getDataAllowance();
+            cout << "Enter New Data Allowance: ";
+            cin >> minAll;
+            cout << endl << plan.getPlanName() << "'s New Data Allowance is ";
+            plan.setDataAllowance(minAll);
+            cout << plan.getDataAllowance() << endl;
+        }
+        
+    }
+
+    planDB.at(tracker) = plan;
+}
+
+void PrintPlan() {
+    cout << "Please enter the plan ID: ";
+    cin >> planId;
+    bool isTrue = false;
+
+    for(int i = 0; i < planDB.size(); i++) {
+        plan = planDB.at(i);
+        if(plan.getPlId() == planId) {
+            plan.printCurrPlan();
+            cout << endl;
+            isTrue = true;
+        }
+    }
+    if(isTrue == false) {
+    cout << "No plan found!" << endl;
+    cout << endl << endl;
+    }
+}
 
 void startMenu() {
 
@@ -350,15 +522,15 @@ void startMenu() {
         }
 
         else if(choice == 9) {
-            
+            AddNewPlan();
         }
 
         else if(choice == 10) {
-            
+            PrintPlan();
         }
 
         else if(choice == 11) {
-            
+            EditPlan();
         }
 
         else if(choice == 12) {

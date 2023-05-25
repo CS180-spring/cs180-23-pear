@@ -1,12 +1,6 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
-SET(CMAKE_CXX_STANDARD 11)
-
-# Main productoin executable
-ADD_EXECUTABLE(task-scheduler
-    src/main.cpp
-    src/customer.cpp
-)
+project(PearDB)
 
 # GTest testing executable
 ADD_SUBDIRECTORY(googletest)

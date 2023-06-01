@@ -92,7 +92,7 @@ void EditCustomer() {
         cout << endl << endl;
         return;
     }
-
+    choice_two = 1;
     while(choice_two != 6) {
         cout << endl << "Please choose an attribute(number) to edit: " << endl;
         cout << "1. Change ID " << endl;
@@ -335,7 +335,7 @@ void EditPlan() {
         cout << endl << endl;
         return;
     }
-
+    choice_two = 1;
     while(choice_two < 9 && choice_two > 0) {
         cout << endl << "Please choose an attribute(number) to edit: " << endl;
         cout << "1. Change ID " << endl;
@@ -474,8 +474,8 @@ void startMenu() {
         cout << "10. View phone plan information" << endl;
         cout << "11. Edit phone plan information" << endl;
         cout << "12. Delete a phone plan" << endl;
-        cout << "13. Purchase a phone" << endl;
-        cout << "14. Exit" << endl;
+        //cout << "13. Purchase a phone" << endl;
+        cout << "13. Exit" << endl;
         cout << endl;
         cout << "Please enter the number corresponding to your selection: ";
         cin >> choice;
@@ -514,11 +514,19 @@ void startMenu() {
         }
 
         else if(choice == 7) {
-            
+            EditPhone();
         }
 
         else if(choice == 8) {
-            
+            cout << "Please Enter Phone ID: ";
+            cin >> var;
+            for(int i = 0; i < phoneDB.size(); i++) {
+                phone = phoneDB.at(i);
+                if(phone.getPhoneID() == var) {
+                    swap(phoneDB.at(i),phoneDB.back());
+                    phoneDB.pop_back();
+                }
+            }
         }
 
         else if(choice == 9) {
@@ -534,13 +542,21 @@ void startMenu() {
         }
 
         else if(choice == 12) {
-            
+            cout << "Please Enter Plan ID: ";
+            cin >> planId;
+            for(int i = 0; i < planDB.size(); i++) {
+                plan = planDB.at(i);
+                if(plan.getPlId() == planId) {
+                    swap(planDB.at(i),planDB.back());
+                    planDB.pop_back();
+                }
+            }
         }
 
         else if(choice == 13) {
-            
+            break;
         }
-        else if(choice < 1 || choice > 14) {
+        else if(choice < 1 || choice > 13) {
             cout << "Invalid Option";
         }
     }

@@ -1,5 +1,6 @@
 #include <vector>
 #include "../header/customer.h"
+#include "../header/sort.h"
 #include <iostream>
 using namespace std;
 
@@ -7,7 +8,8 @@ using namespace std;
 class Sorter {
 public:
     vector<Customer> sortedCustomers;
-    vector<Customer> sorByPlanID(const vector<Customer> items, int sortBy) {
+
+    vector<Customer> Sorter::sortByPlanID(const vector<Customer> items, int sortBy) {
         if(sortBy == 1){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPlanId() == sortBy) {
@@ -31,9 +33,9 @@ public:
         }
        
         return sortedCustomers;
-    }
+    };
 
-    vector<Customer> sortByPayment(const vector<Customer> items, string paymentM) {
+    vector<Customer> Sorter::sortByPayment(const vector<Customer> items, string paymentM) {
         if(paymentM == "mastercard"){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPaymentMethod() == paymentM) {
@@ -69,7 +71,7 @@ public:
         }
        
         return sortedCustomers;
-    }
+    };
 };
 
 

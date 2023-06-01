@@ -4,6 +4,7 @@
 #include "../header/customer.h"
 #include "../header/plan.h"
 #include "../header/phone.h"
+#include "../header/sort.h"
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
 
@@ -454,9 +455,27 @@ void PrintPlan() {
     }
 }
 
+void sortCust(){
+    int sortBy;
+    Sorter s;
+    int pID;
+    string pM;
+    cout << "Please enter 1 to sort by plan or 2 to sort by payment method: ";
+    cin >> sortBy;
+    if(sortBy == 1){
+        cout<< "Enter the plan # you wish to sort by: ";
+        cin>> pID;
+        s.sortByPlanID(customerDB, pID);
+    }else if (sortBy == 2){
+        cout<< "Enter the payment method you wish to sort by: ";
+        cin>> pM;
+        s.sortByPayment(customerDB, pM);
+    }
+}
+
 void startMenu() {
 
-    while(choice != 14) {
+    while(choice != 15) {
         cout << "=================================" << endl;
         cout << "Welcome to PearDB" << endl;
         cout << "=================================" << endl;
@@ -475,7 +494,8 @@ void startMenu() {
         cout << "11. Edit phone plan information" << endl;
         cout << "12. Delete a phone plan" << endl;
         cout << "13. Purchase a phone" << endl;
-        cout << "14. Exit" << endl;
+        cout << "14. Sort customers by Plan ID or Payment Method" << endl;
+        cout << "15. Exit" << endl;
         cout << endl;
         cout << "Please enter the number corresponding to your selection: ";
         cin >> choice;
@@ -540,7 +560,10 @@ void startMenu() {
         else if(choice == 13) {
             
         }
-        else if(choice < 1 || choice > 14) {
+        else if (choice == 14){
+            sortCust();
+        }
+        else if(choice < 1 || choice > 15) {
             cout << "Invalid Option";
         }
     }

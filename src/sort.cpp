@@ -4,7 +4,6 @@
 #include <iostream>
 using namespace std;
 
-
     vector<Customer> sortedCustomers;
 
     vector<Customer> Sorter::sortByPlanID(const vector<Customer> items, int sortBy) {
@@ -40,7 +39,7 @@ using namespace std;
                     sortedCustomers.push_back(items.at(i));
                 }
             }
-        }else if(paymentM == "visa"){
+        }else if(paymentM == "visa"||"Visa"){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPaymentMethod() == paymentM) {
                     sortedCustomers.push_back(items.at(i));

@@ -467,9 +467,14 @@ void sortCust(){
         cin>> pID;
         s.sortByPlanID(customerDB, pID);
     }else if (sortBy == 2){
-        cout<< "Enter the payment method you wish to sort by: ";
+        cout<< "Enter the payment method you wish to sort by(Visa, Master, Paypal, Stripe): ";
         cin>> pM;
-        s.sortByPayment(customerDB, pM);
+        vector<Customer> temp = s.sortByPayment(customerDB, pM);
+        for(int i=0; i<temp.size(); ++i) {
+            obj = temp.at(i);
+            obj.display();
+        }
+        
     }
 }
 

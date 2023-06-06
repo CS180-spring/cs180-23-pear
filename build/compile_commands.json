@@ -1,0 +1,68 @@
+[
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -Dgtest_disable_pthreads=ON -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest -g -o CMakeFiles\\myTests.dir\\myTests.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\myTests.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\myTests.cpp",
+  "output": "CMakeFiles\\myTests.dir\\myTests.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -Dgtest_disable_pthreads=ON -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest -g -o CMakeFiles\\myTests.dir\\customer.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\customer.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\customer.cpp",
+  "output": "CMakeFiles\\myTests.dir\\customer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -g -o CMakeFiles\\demo.dir\\main.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\main.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\main.cpp",
+  "output": "CMakeFiles\\demo.dir\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -g -o CMakeFiles\\demo.dir\\phone.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\phone.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\phone.cpp",
+  "output": "CMakeFiles\\demo.dir\\phone.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -g -o CMakeFiles\\demo.dir\\customer.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\customer.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\customer.cpp",
+  "output": "CMakeFiles\\demo.dir\\customer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -g -o CMakeFiles\\demo.dir\\sort.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\sort.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\sort.cpp",
+  "output": "CMakeFiles\\demo.dir\\sort.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/include -g -o CMakeFiles\\demo.dir\\plan.cpp.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\plan.cpp",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\plan.cpp",
+  "output": "CMakeFiles\\demo.dir\\plan.cpp.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googlemock/include -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googlemock -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googlemock\\src\\gmock-all.cc",
+  "output": "googletest\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googlemock/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googlemock -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googlemock\\src\\gmock_main.cc",
+  "output": "googletest\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest/include -IC:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googletest\\src\\gtest-all.cc",
+  "output": "googletest\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj"
+},
+{
+  "directory": "C:/Users/Matthew/Desktop/projects/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest/include -isystem C:/Users/Matthew/Desktop/projects/cs180-23-pear/src/googletest/googletest -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:\\Users\\Matthew\\Desktop\\projects\\cs180-23-pear\\src\\googletest\\googletest\\src\\gtest_main.cc",
+  "output": "googletest\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj"
+}
+]

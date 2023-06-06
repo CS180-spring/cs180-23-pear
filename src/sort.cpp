@@ -7,6 +7,7 @@ using namespace std;
     vector<Customer> sortedCustomers;
 
     vector<Customer> Sorter::sortByPlanID(const vector<Customer> items, int sortBy) {
+        sortedCustomers.clear();
         if(sortBy == 1){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPlanId() == sortBy) {
@@ -33,7 +34,8 @@ using namespace std;
     };
 
     vector<Customer> Sorter::sortByPayment(const vector<Customer> items, string paymentM) {
-        if(paymentM == "mastercard"){
+        sortedCustomers.clear();
+        if(paymentM == "master"||"Master"){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPaymentMethod() == paymentM) {
                     sortedCustomers.push_back(items.at(i));
@@ -45,19 +47,13 @@ using namespace std;
                     sortedCustomers.push_back(items.at(i));
                 }
             }
-        }else if(paymentM == "amex"){
+        }else if(paymentM == "paypal"||"Paypal"||"PayPal"){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPaymentMethod() == paymentM) {
                     sortedCustomers.push_back(items.at(i));
                 }
             }
-        }else if(paymentM == "cash"){
-            for (int i = 0; i < items.size(); i++) {
-                if (items.at(i).getPaymentMethod() == paymentM) {
-                    sortedCustomers.push_back(items.at(i));
-                }
-            }
-        }else if(paymentM == "check"){
+        }else if(paymentM == "stripe"||"Stripe"){
             for (int i = 0; i < items.size(); i++) {
                 if (items.at(i).getPaymentMethod() == paymentM) {
                     sortedCustomers.push_back(items.at(i));

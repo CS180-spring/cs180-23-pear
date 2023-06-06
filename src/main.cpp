@@ -39,14 +39,14 @@ using namespace std;
 
 void AddNewCustomer() {
     cout << "Enter Customer ID: ";
-    cin >> id;
+    cin >> id; // TO-DO: Don't allow user to create two customers with same id
     cout << endl << "Enter Customer Name(First-Last): ";
     cin >> sname;
     cout << endl << "Enter Customer Address(State-City-ZIP-Street-Unit): ";
     cin >> address;
     cout << endl << "Enter Customer Phone Number(XXX-XXX-XXXX): ";
     cin >> num;
-    cout << endl << "Enter Customer Payment Method(\"Visa, Master, Paypal, Stripe): ";
+    cout << endl << "Enter Customer Payment Method(Visa, Master, Paypal, Stripe): ";
     cin >> payment;
     cout << endl << "Enter Customer Plan Choice(1-3): ";
     cin >> planId;
@@ -470,9 +470,13 @@ void sortCust(){
         cout<< "Enter the payment method you wish to sort by(Visa, Master, Paypal, Stripe): ";
         cin>> pM;
         vector<Customer> temp = s.sortByPayment(customerDB, pM);
+        // cout << temp.size();
+        // int test=0;
+        // cin>>test;
         for(int i=0; i<temp.size(); ++i) {
             obj = temp.at(i);
             obj.display();
+            cout << endl;
         }
         
     }

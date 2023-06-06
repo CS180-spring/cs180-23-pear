@@ -5,8 +5,6 @@
 using namespace std;
 
 
-class Sorter {
-public:
     vector<Customer> sortedCustomers;
 
     vector<Customer> Sorter::sortByPlanID(const vector<Customer> items, int sortBy) {
@@ -72,8 +70,6 @@ public:
        
         return sortedCustomers;
     };
-};
-
 
 // // Example usage:
 // int main() {

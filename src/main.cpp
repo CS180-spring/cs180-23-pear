@@ -5,6 +5,10 @@
 #include "../header/plan.h"
 #include "../header/phone.h"
 #include "../header/sort.h"
+#include "../header/export.h"
+//#include "nlohmann/json.hpp"
+
+
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
 
@@ -498,6 +502,12 @@ void sortCust(){
     }
 }
 
+
+void doExport(){
+    Export e;
+    e.Exporter(customerDB);
+}
+
 void startMenu() {
 
     while(choice != 15) {
@@ -603,7 +613,7 @@ void startMenu() {
             sortCust();
         }
         else if (choice == 14){
-            //TO-DO: Export
+            doExport();
         }
         else if (choice == 15){
             break;

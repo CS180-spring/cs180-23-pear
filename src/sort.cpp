@@ -29,10 +29,11 @@ using namespace std;
         }else{
             cout<<"No customers exist with plan " << sortBy << " please try again." ;
         }
-       if(sortedCustomers.size() > 0){
-            return sortedCustomers;
+       if(sortedCustomers.size() == 0){
+            cout<<"No customers exist with plan " << sortBy << " please try again." ;
+
        }
-        cout<<"No customers exist with plan " << sortBy << " please try again." ;
+        return sortedCustomers;
     };
 
     vector<Customer> Sorter::sortByPayment(const vector<Customer> items, string paymentM) {
@@ -67,10 +68,3 @@ using namespace std;
        
         return sortedCustomers;
     };
-
-// // Example usage:
-// int main() {
-//     
-
-//     return 0;
-// }

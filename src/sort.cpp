@@ -29,8 +29,10 @@ using namespace std;
         }else{
             cout<<"No customers exist with plan " << sortBy << " please try again." ;
         }
-       
-        return sortedCustomers;
+       if(sortedCustomers.size() > 0){
+            return sortedCustomers;
+       }
+        cout<<"No customers exist with plan " << sortBy << " please try again." ;
     };
 
     vector<Customer> Sorter::sortByPayment(const vector<Customer> items, string paymentM) {

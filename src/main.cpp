@@ -460,12 +460,20 @@ void sortCust(){
     Sorter s;
     int pID;
     string pM;
+    int count;
     cout << "Please enter 1 to sort by plan or 2 to sort by payment method: ";
     cin >> sortBy;
     if(sortBy == 1){
         cout<< "Enter the plan # you wish to sort by: ";
         cin>> pID;
-        s.sortByPlanID(customerDB, pID);
+       vector<Customer> temp = s.sortByPlanID(customerDB, pID);
+        for(int i=0; i<temp.size(); ++i) {
+            obj = temp.at(i);
+            obj.display();
+            cout << endl;
+            count = i + 1;
+        }
+        cout<< "Total: " + count;
     }else if (sortBy == 2){
         cout<< "Enter the payment method you wish to sort by(Visa, Master, Paypal, Stripe): ";
         cin>> pM;
@@ -477,8 +485,9 @@ void sortCust(){
             obj = temp.at(i);
             obj.display();
             cout << endl;
+            count = i + 1;
         }
-        
+        cout<< "Total: " + count;
     }
 }
 

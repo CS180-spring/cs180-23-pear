@@ -469,6 +469,7 @@ void sortCust(){
     if(sortBy == 1){
         cout<< "Enter the plan # you wish to sort by: ";
         cin>> pID;
+        cout <<endl;
        vector<Customer> temp = s.sortByPlanID(customerDB, pID);
         for(int i=0; i<temp.size(); ++i) {
             obj = temp.at(i);
@@ -484,6 +485,7 @@ void sortCust(){
     }else if (sortBy == 2){
         cout<< "Enter the payment method you wish to sort by(Visa, Master, Paypal, Stripe): ";
         cin>> pM;
+        cout <<endl;
         vector<Customer> temp = s.sortByPayment(customerDB, pM);
         for(int i=0; i<temp.size(); ++i) {
             obj = temp.at(i);

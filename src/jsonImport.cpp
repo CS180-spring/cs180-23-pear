@@ -13,7 +13,7 @@ vector<Customer> Import::Importer(){
     bool failed = false;
     cout << "Enter the name of the JSON file: ";
     cin >> filename;
-
+    cout <<endl;
     ifstream file(filename);
     if (!file.is_open()) {
         cout << "Error opening file: " << filename << ", please try again." << endl;

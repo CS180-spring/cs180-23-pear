@@ -93,7 +93,7 @@ void EditCustomer() {
         cout << endl << endl;
         return;
     }
-
+    choice_two = 1;
     while(choice_two != 6) {
         cout << endl << "Please choose an attribute(number) to edit: " << endl;
         cout << "1. Change ID " << endl;
@@ -336,7 +336,7 @@ void EditPlan() {
         cout << endl << endl;
         return;
     }
-
+    choice_two = 1;
     while(choice_two < 9 && choice_two > 0) {
         cout << endl << "Please choose an attribute(number) to edit: " << endl;
         cout << "1. Change ID " << endl;
@@ -502,8 +502,9 @@ void startMenu() {
         cout << "10. View phone plan information" << endl;
         cout << "11. Edit phone plan information" << endl;
         cout << "12. Delete a phone plan" << endl;
-        cout << "13. Purchase a phone" << endl;
-        cout << "14. Sort customers by Plan ID or Payment Method" << endl;
+        //cout << "13. Purchase a phone" << endl;
+        cout << "13. Sort customers by Plan ID or Payment Method" << endl;
+        cout << "14. Export current data to JSON file" << endl;
         cout << "15. Exit" << endl;
         cout << endl;
         cout << "Please enter the number corresponding to your selection: ";
@@ -543,11 +544,19 @@ void startMenu() {
         }
 
         else if(choice == 7) {
-            
+            EditPhone();
         }
 
         else if(choice == 8) {
-            
+            cout << "Please Enter Phone ID: ";
+            cin >> var;
+            for(int i = 0; i < phoneDB.size(); i++) {
+                phone = phoneDB.at(i);
+                if(phone.getPhoneID() == var) {
+                    swap(phoneDB.at(i),phoneDB.back());
+                    phoneDB.pop_back();
+                }
+            }
         }
 
         else if(choice == 9) {
@@ -563,14 +572,25 @@ void startMenu() {
         }
 
         else if(choice == 12) {
-            
+            cout << "Please Enter Plan ID: ";
+            cin >> planId;
+            for(int i = 0; i < planDB.size(); i++) {
+                plan = planDB.at(i);
+                if(plan.getPlId() == planId) {
+                    swap(planDB.at(i),planDB.back());
+                    planDB.pop_back();
+                }
+            }
         }
 
         else if(choice == 13) {
-            
+            sortCust();
         }
         else if (choice == 14){
-            sortCust();
+            //TO-DO: Export
+        }
+        else if (choice == 15){
+            break;
         }
         else if(choice < 1 || choice > 15) {
             cout << "Invalid Option";

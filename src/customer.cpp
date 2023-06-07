@@ -87,7 +87,7 @@ void Customer::display() const {
     else if(planId == 2) {
         cout << "Unlimited Plus 2.0" << endl;
     }
-    else if(planId == 2) {
+    else if(planId == 3) {
         cout << "Unlimited Pro 2.0" << endl;
     }
     else {

@@ -1,0 +1,26 @@
+[
+    {
+        "address": "a",
+        "id": 1,
+        "name": "a",
+        "paymentMethod": "visa",
+        "phoneNumber": "a",
+        "planID": 1
+    },
+    {
+        "address": "s",
+        "id": 2,
+        "name": "s",
+        "paymentMethod": "master",
+        "phoneNumber": "s",
+        "planID": 2
+    },
+    {
+        "address": "d",
+        "id": 3,
+        "name": "d",
+        "paymentMethod": "paypal",
+        "phoneNumber": "d",
+        "planID": 3
+    }
+]

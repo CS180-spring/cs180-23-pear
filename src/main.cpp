@@ -460,7 +460,7 @@ void sortCust(){
     Sorter s;
     int pID;
     string pM;
-    int count;
+    int countSC;
     cout << "Please enter 1 to sort by plan or 2 to sort by payment method: ";
     cin >> sortBy;
     if(sortBy == 1){
@@ -471,9 +471,13 @@ void sortCust(){
             obj = temp.at(i);
             obj.display();
             cout << endl;
-            count = i + 1;
+            countSC = i + 1;
+            if(i == temp.size() - 1){
+                cout<<"Total: ";
+                cout<<countSC<<endl;
+            }
         }
-        cout<< "Total: " + count;
+
     }else if (sortBy == 2){
         cout<< "Enter the payment method you wish to sort by(Visa, Master, Paypal, Stripe): ";
         cin>> pM;
@@ -485,9 +489,12 @@ void sortCust(){
             obj = temp.at(i);
             obj.display();
             cout << endl;
-            count = i + 1;
+            countSC = i + 1;
+             if(i == temp.size() - 1){
+                cout<<"Total: ";
+                cout<<countSC<<endl;
+            }
         }
-        cout<< "Total: " + count;
     }
 }
 

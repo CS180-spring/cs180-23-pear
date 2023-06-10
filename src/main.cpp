@@ -4,7 +4,7 @@
 #include "../header/customer.h"
 #include "../header/plan.h"
 #include "../header/phone.h"
-#include "../header/sort.h"
+#include "../header/searcher.h"
 #include "../header/export.h"
 #include "../header/import.h"
 
@@ -458,43 +458,44 @@ void PrintPlan() {
     }
 }
 
-void sortCust(){
-    int sortBy;
-    Sorter s;
+void searchCust(){
+    int searchBy;
+    Searcher s;
     int pID;
     string pM;
     int countSC;
-    cout << "Please enter 1 to sort by plan or 2 to sort by payment method: ";
-    cin >> sortBy;
-    if(sortBy == 1){
-        cout<< "Enter the plan # you wish to sort by: ";
+    cout << "Please enter 1 to search by plan or 2 to search by payment method: ";
+    cin >> searchBy;
+    cout<<endl;
+    if(searchBy == 1){
+        cout<< "Enter the plan # you wish to search by: ";
         cin>> pID;
         cout <<endl;
-       vector<Customer> temp = s.sortByPlanID(customerDB, pID);
+       vector<Customer> temp = s.searchByPlanID(customerDB, pID);
         for(int i=0; i<temp.size(); ++i) {
             obj = temp.at(i);
             obj.display();
             cout << endl;
             countSC = i + 1;
             if(i == temp.size() - 1){
-                cout<<"Total: ";
-                cout<<countSC<<endl;
+                cout<<"Total: " << countSC << endl;
+                // cout<<countSC<<endl;
             }
         }
 
-    }else if (sortBy == 2){
-        cout<< "Enter the payment method you wish to sort by(Visa, Master, Paypal, Stripe): ";
+    }else if (searchBy == 2){
+        cout<< "Enter the payment method you wish to search by (Visa, Master, Paypal, Stripe): ";
         cin>> pM;
         cout <<endl;
-        vector<Customer> temp = s.sortByPayment(customerDB, pM);
+        vector<Customer> temp = s.searchByPayment(customerDB, pM);
         for(int i=0; i<temp.size(); ++i) {
             obj = temp.at(i);
             obj.display();
             cout << endl;
             countSC = i + 1;
              if(i == temp.size() - 1){
-                cout<<"Total: ";
-                cout<<countSC<<endl;
+                cout<<"Total: " << countSC << endl;
+                // cout<<countSC<<endl;
             }
         }
     }
@@ -544,7 +545,7 @@ void startMenu() {
         cout << "11. Edit phone plan information" << endl;
         cout << "12. Delete a phone plan" << endl;
         //cout << "13. Purchase a phone" << endl;
-        cout << "13. Sort customers by Plan ID or Payment Method" << endl;
+        cout << "13. Search customers by Plan ID or Payment Method" << endl;
         cout << "14. Export current customer database to JSON file" << endl;
         cout << "15. Import customer database from a JSON file" << endl;
         cout << "16. Exit" << endl;
@@ -626,7 +627,7 @@ void startMenu() {
         }
 
         else if(choice == 13) {
-            sortCust();
+            searchCust();
         }
         else if (choice == 14){
             doExport();

@@ -524,7 +524,32 @@ void doImport(){
     }
 }
 
+void printWelcomeArt(){
+
+    cout << "                                                                                                                                           \n";
+    cout << "                                                                                                                                           \n";
+    cout << "PPPPPPPPPPPPPPPPP   EEEEEEEEEEEEEEEEEEEEEE               AAA               RRRRRRRRRRRRRRRRR        DDDDDDDDDDDDD      BBBBBBBBBBBBBBBBB   \n";
+    cout << "P::::::::::::::::P  E::::::::::::::::::::E              A:::A              R::::::::::::::::R       D::::::::::::DDD   B::::::::::::::::B  \n";
+    cout << "P::::::PPPPPP:::::P E::::::::::::::::::::E             A:::::A             R::::::RRRRRR:::::R      D:::::::::::::::DD B::::::BBBBBB:::::B \n";
+    cout << "PP:::::P     P:::::PEE::::::EEEEEEEEE::::E            A:::::::A            RR:::::R     R:::::R     DDD:::::DDDDD:::::DBB:::::B     B:::::B\n";
+    cout << "  P::::P     P:::::P  E:::::E       EEEEEE           A:::::::::A             R::::R     R:::::R       D:::::D    D:::::D B::::B     B:::::B\n";
+    cout << "  P::::P     P:::::P  E:::::E                       A:::::A:::::A            R::::R     R:::::R       D:::::D     D:::::DB::::B     B:::::B\n";
+    cout << "  P::::PPPPPP:::::P   E::::::EEEEEEEEEE            A:::::A A:::::A           R::::RRRRRR:::::R        D:::::D     D:::::DB::::BBBBBB:::::B \n";
+    cout << "  P:::::::::::::PP    E:::::::::::::::E           A:::::A   A:::::A          R:::::::::::::RR         D:::::D     D:::::DB:::::::::::::BB  \n";
+    cout << "  P::::PPPPPPPPP      E:::::::::::::::E          A:::::A     A:::::A         R::::RRRRRR:::::R        D:::::D     D:::::DB::::BBBBBB:::::B \n";
+    cout << "  P::::P              E::::::EEEEEEEEEE         A:::::AAAAAAAAA:::::A        R::::R     R:::::R       D:::::D     D:::::DB::::B     B:::::B\n";
+    cout << "  P::::P              E:::::E                  A:::::::::::::::::::::A       R::::R     R:::::R       D:::::D     D:::::DB::::B     B:::::B\n";
+    cout << "  P::::P              E:::::E       EEEEEE    A:::::AAAAAAAAAAAAA:::::A      R::::R     R:::::R       D:::::D    D:::::D B::::B     B:::::B\n";
+    cout << "PP::::::PP          EE::::::EEEEEEEE:::::E   A:::::A             A:::::A   RR:::::R     R:::::R     DDD:::::DDDDD:::::DBB:::::BBBBBB::::::B\n";
+    cout << "P::::::::P          E::::::::::::::::::::E  A:::::A               A:::::A  R::::::R     R:::::R     D:::::::::::::::DD B:::::::::::::::::B\n";
+    cout << "P::::::::P          E::::::::::::::::::::E A:::::A                 A:::::A R::::::R     R:::::R     D::::::::::::DDD   B::::::::::::::::B\n";
+    cout << "                                                                                                                                           \n";
+
+}
+
 void startMenu() {
+
+    printWelcomeArt();
 
     while(choice != 16) {
         cout << "=================================" << endl;

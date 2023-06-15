@@ -7,6 +7,7 @@
 #include "../header/searcher.h"
 #include "../header/export.h"
 #include "../header/import.h"
+#include "../header/sorter.h"
 
 
 //Classes to implement: Customer.h, Phones.h, Plan.h
@@ -29,6 +30,7 @@ char choice_three;
 vector<Customer> customerDB;
 vector<Plan> planDB;
 vector<Phone> phoneDB;
+vector <Customer> sortedCustomers;
 Customer obj;
 Plan plan;
 int planChoice;
@@ -524,6 +526,24 @@ void doImport(){
     }
 }
 
+void sortCust(){
+    int searchBy;
+    cout<< "Press 1 to sort customers numerically by plan or 2 to sort customers alphabetically by payment method: ";
+    cin>> searchBy;
+    cout <<endl;
+    if(searchBy < 1 || searchBy > 2){
+        cout<< "Invalid selection please try again. ";
+    }else{
+        Sorter s;
+        customerDB = s.sortBy(customerDB, searchBy);
+        for(int i = 0; i < customerDB.size(); i++){
+            obj = customerDB.at(i);
+            obj.display();
+            cout << endl;
+        }
+    }
+}
+
 void printWelcomeArt(){
 
     cout << "                                                                                                                                           \n";
@@ -551,7 +571,7 @@ void startMenu() {
 
     printWelcomeArt();
 
-    while(choice != 16) {
+    while(choice != 17) {
         cout << "=================================" << endl;
         cout << "Welcome to PearDB" << endl;
         cout << "=================================" << endl;
@@ -573,7 +593,8 @@ void startMenu() {
         cout << "13. Search customers by Plan ID or Payment Method" << endl;
         cout << "14. Export current customer database to JSON file" << endl;
         cout << "15. Import customer database from a JSON file" << endl;
-        cout << "16. Exit" << endl;
+        cout << "16. Sort Customers" << endl;
+        cout << "17. Exit" << endl;
         cout << endl;
         cout << "Please enter the number corresponding to your selection: ";
         cin >> choice;
@@ -660,8 +681,10 @@ void startMenu() {
         else if (choice == 15){
             doImport();
         }else if(choice == 16){
+            sortCust();
+        }else if(choice == 17){
             break;
-        }else if(choice < 1 || choice > 16) {
+        }else if(choice < 1 || choice > 17) {
             cout << "Invalid Option";
         }
     }

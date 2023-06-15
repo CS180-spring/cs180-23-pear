@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\main.cpp.obj -c C:\\Users\\victo\\OneDrive\\Desktop\\cs180-23-pear\\src\\main.cpp",
+  "file": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/src/main.cpp",
+  "output": "CMakeFiles/demo.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\phone.cpp.obj -c C:\\Users\\victo\\OneDrive\\Desktop\\cs180-23-pear\\src\\phone.cpp",
+  "file": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/src/phone.cpp",
+  "output": "CMakeFiles/demo.dir/phone.cpp.obj"
+},
+{
+  "directory": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\customer.cpp.obj -c C:\\Users\\victo\\OneDrive\\Desktop\\cs180-23-pear\\src\\customer.cpp",
+  "file": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/src/customer.cpp",
+  "output": "CMakeFiles/demo.dir/customer.cpp.obj"
+},
+{
+  "directory": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\searcher.cpp.obj -c C:\\Users\\victo\\OneDrive\\Desktop\\cs180-23-pear\\src\\searcher.cpp",
+  "file": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/src/searcher.cpp",
+  "output": "CMakeFiles/demo.dir/searcher.cpp.obj"
+},
+{
+  "directory": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\plan.cpp.obj -c C:\\Users\\victo\\OneDrive\\Desktop\\cs180-23-pear\\src\\plan.cpp",
+  "file": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/src/plan.cpp",
+  "output": "CMakeFiles/demo.dir/plan.cpp.obj"
+}
+]

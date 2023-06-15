@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp"
+    },
+    "cmake.sourceDirectory": "C:/Users/victo/OneDrive/Desktop/cs180-23-pear/src",
+    "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\cpp.exe"
+    //"C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/gcc.exe"
+}

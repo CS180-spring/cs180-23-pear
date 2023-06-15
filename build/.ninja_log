@@ -1,0 +1,18 @@
+# ninja log v5
+18	1004	7077395950764904	googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	65894d79b731d75e
+22	403	7077400143652325	CMakeFiles/demo.dir/plan.cpp.obj	718c2d52ef217ba6
+12	617	7077482557875827	CMakeFiles/demo.dir/main.cpp.obj	89cc0a2561112e6b
+7224	7474	7077396015468863	lib/libgmock.a	b475f0c936f51c4b
+15	5501	7077395995679162	googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	ebc2ea97cae4bc49
+15	362	7077482555344402	CMakeFiles/demo.dir/sort.cpp.obj	caea3e2a9cee604c
+617	726	7077482558964321	demo.exe	1901710a6ea17471
+7474	7528	7077396016019001	lib/libgmock_main.a	60bb9ebbbb759478
+9	2305	7077395963766636	googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	a311c38ff9758eca
+7228	7280	7077396013538578	lib/libgtest_main.a	bbc4130581fe18e8
+12	1247	7077395953202157	googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	10362c7606b60ab
+21	1817	7077482918128393	CMakeFiles/myTests.dir/myTests.cpp.obj	6b4e2e441c5e3455
+11	307	7077400142686815	CMakeFiles/demo.dir/phone.cpp.obj	6e4766d53d393692
+7	353	7077395944265366	CMakeFiles/myTests.dir/customer.cpp.obj	390824d0bb2226b4
+1818	3973	7077482939634996	myTests.exe	466b70c35ff4a77e
+5503	7220	7077396012928635	lib/libgtest.a	5bcba283829ad802
+16	320	7077400142816968	CMakeFiles/demo.dir/customer.cpp.obj	db3b58258ad3cce6

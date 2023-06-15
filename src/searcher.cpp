@@ -70,3 +70,19 @@ using namespace std;
        
         return searchCustomers;
     };
+
+    vector<Customer> Searcher::searchByPaymentAndPlan(const vector<Customer>& items, int searchByPlan, const string& searchByPayment) {
+    searchCustomers.clear();
+
+    for (const Customer& customer : items) {
+        if (customer.getPlanId() == searchByPlan && customer.getPaymentMethod() == searchByPayment) {
+            searchCustomers.push_back(customer);
+        }
+    }
+
+    if (searchCustomers.empty()) {
+        cout << "No customers exist with plan " << searchByPlan << " and " << searchByPayment << " payment method. Please try again." << endl;
+    }
+
+    return searchCustomers;
+}

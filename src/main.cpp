@@ -40,6 +40,41 @@ Phone phone;
 
 using namespace std;
 
+void DeletePlan(){
+            cout << "Please Enter Plan ID: ";
+            cin >> planId;
+            for(int i = 0; i < planDB.size(); i++) {
+                plan = planDB.at(i);
+                if(plan.getPlId() == planId) {
+                    swap(planDB.at(i),planDB.back());
+                    planDB.pop_back();
+                }
+            }
+}
+
+void DeletePhone(){
+            cout << "Please Enter Phone ID: ";
+            cin >> var;
+            for(int i = 0; i < phoneDB.size(); i++) {
+                phone = phoneDB.at(i);
+                if(phone.getPhoneID() == var) {
+                    swap(phoneDB.at(i),phoneDB.back());
+                    phoneDB.pop_back();
+                }
+            }
+}
+
+void DeleteCustomer(){
+            cout << "Please Enter Customer ID: ";
+            cin >> id;
+            for(int i = 0; i < customerDB.size(); i++) {
+                obj = customerDB.at(i);
+                if(obj.getId() == id) {
+                    swap(customerDB.at(i),customerDB.back());
+                    customerDB.pop_back();
+                }
+            }
+}
 void AddNewCustomer() {
     cout << "Enter Customer ID: ";
     cin >> id; // TO-DO: Don't allow user to create two customers with same id
@@ -464,7 +499,7 @@ void searchCust(){
     int pID;
     string pM;
     int countSC;
-    cout << "Please enter 1 to search by plan or 2 to search by payment method: ";
+    cout << "Please enter 1 to search by plan or 2 to search by payment method, or 3 to search by both: ";
     cin >> searchBy;
     cout<<endl;
     if(searchBy == 1){
@@ -488,6 +523,26 @@ void searchCust(){
         cin>> pM;
         cout <<endl;
         vector<Customer> temp = s.searchByPayment(customerDB, pM);
+        for(int i=0; i<temp.size(); ++i) {
+            obj = temp.at(i);
+            obj.display();
+            cout << endl;
+            countSC = i + 1;
+             if(i == temp.size() - 1){
+                cout<<"Total: " << countSC << endl;
+                // cout<<countSC<<endl;
+            }
+        }
+    }else if (searchBy == 3){
+        cout<< "Enter the plan # you wish to search by: ";
+        cin>> pID;
+        cout <<endl;
+
+        cout<< "Enter the payment method you wish to search by (Visa, Master, Paypal, Stripe): ";
+        cin>> pM;
+        cout <<endl;
+        vector<Customer> temp = s.searchByPaymentAndPlan(customerDB, pID, pM);
+
         for(int i=0; i<temp.size(); ++i) {
             obj = temp.at(i);
             obj.display();
@@ -592,15 +647,7 @@ void startMenu() {
         }
 
         else if(choice == 4) {
-            cout << "Please Enter Customer ID: ";
-            cin >> id;
-            for(int i = 0; i < customerDB.size(); i++) {
-                obj = customerDB.at(i);
-                if(obj.getId() == id) {
-                    swap(customerDB.at(i),customerDB.back());
-                    customerDB.pop_back();
-                }
-            }
+            DeleteCustomer();
         }
 
         else if(choice == 5) {
@@ -616,15 +663,7 @@ void startMenu() {
         }
 
         else if(choice == 8) {
-            cout << "Please Enter Phone ID: ";
-            cin >> var;
-            for(int i = 0; i < phoneDB.size(); i++) {
-                phone = phoneDB.at(i);
-                if(phone.getPhoneID() == var) {
-                    swap(phoneDB.at(i),phoneDB.back());
-                    phoneDB.pop_back();
-                }
-            }
+            DeletePhone();
         }
 
         else if(choice == 9) {
@@ -640,15 +679,7 @@ void startMenu() {
         }
 
         else if(choice == 12) {
-            cout << "Please Enter Plan ID: ";
-            cin >> planId;
-            for(int i = 0; i < planDB.size(); i++) {
-                plan = planDB.at(i);
-                if(plan.getPlId() == planId) {
-                    swap(planDB.at(i),planDB.back());
-                    planDB.pop_back();
-                }
-            }
+            DeletePlan();
         }
 
         else if(choice == 13) {

@@ -13,6 +13,7 @@
 //Classes to implement: Customer.h, Phones.h, Plan.h
 
 string sname;
+Export e;
 string address;
 string payment;
 string temp;
@@ -39,6 +40,7 @@ double minAll;
 double textAll;
 double dataAll;
 Phone phone;
+bool autoEnabled = false;
 
 using namespace std;
 
@@ -94,6 +96,10 @@ void AddNewCustomer() {
     obj = Customer(id, sname, address, num, planId, payment);
     customerDB.push_back(obj);
     cout << endl << sname << " has been added to the database!" << endl;
+
+    if(autoEnabled) {
+        e.Exporter(customerDB, 1);
+    }
 }
 
 void ViewCustomer() {
@@ -186,6 +192,10 @@ void EditCustomer() {
     }
 
     customerDB.at(tracker) = obj;
+
+    if(autoEnabled) {
+        e.Exporter(customerDB, 1);
+    }
 }
 
 void AddNewPhone() {
@@ -560,8 +570,7 @@ void searchCust(){
 
 
 void doExport(){
-    Export e;
-    e.Exporter(customerDB);
+    e.Exporter(customerDB, 1);
 }
 
 void doImport(){
@@ -626,7 +635,7 @@ void startMenu() {
 
     printWelcomeArt();
 
-    while(choice != 17) {
+    while(choice != 18) {
         cout << "=================================" << endl;
         cout << "Welcome to PearDB" << endl;
         cout << "=================================" << endl;
@@ -644,12 +653,14 @@ void startMenu() {
         cout << "10. View phone plan information" << endl;
         cout << "11. Edit phone plan information" << endl;
         cout << "12. Delete a phone plan" << endl;
-        //cout << "13. Purchase a phone" << endl;
         cout << "13. Search customers by Plan ID or Payment Method" << endl;
         cout << "14. Export current customer database to JSON file" << endl;
         cout << "15. Import customer database from a JSON file" << endl;
         cout << "16. Sort Customers" << endl;
-        cout << "17. Exit" << endl;
+        if(autoEnabled) {
+            cout << "17. Disable customer database Autosave" << endl;
+        } else { cout << "17. Enable customer database Autosave" << endl; }
+        cout << "18. Exit" << endl;
         cout << endl;
         cout << "Please enter the number corresponding to your selection: ";
         cin >> choice;
@@ -714,8 +725,15 @@ void startMenu() {
         }else if(choice == 16){
             sortCust();
         }else if(choice == 17){
+            if(autoEnabled) {
+                autoEnabled = false;
+            } else {
+                cout << "Autosave files will be saved as autosave.json" << endl;
+                autoEnabled = true;
+            }
+        }else if(choice == 18){
             break;
-        }else if(choice < 1 || choice > 17) {
+        }else if(choice < 1 || choice > 18) {
             cout << "Invalid Option";
         }
     }

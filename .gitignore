@@ -7,3 +7,5 @@ lib/
 .vscode/c_cpp_properties.json
 .vscode/settings.json
 .vscode/c_cpp_properties.json
+build/autosave
+build/demo.exe

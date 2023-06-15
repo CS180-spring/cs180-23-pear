@@ -15,9 +15,12 @@ We are implementing a database for a mobile service provider. The database offer
 10. View phone plan information
 11. Edit phone plan information
 12. Delete a phone plan
-13. Sort customers by Plan ID or Payment Method
-14. Export current data to JSON file
-15. Exit
+13. Search customers by Plan ID or Payment Method
+14. Export current customer database to JSON file
+15. Import customer database from a JSON file
+16. Sort Customers
+17. Enable customer database Autosave
+18. Exit
 
 ### Current Schema:
 

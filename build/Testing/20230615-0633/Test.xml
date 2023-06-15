@@ -6,29 +6,29 @@
 	CompilerName=""
 	CompilerVersion=""
 	OSName="Windows"
-	Hostname="Vics-Laptop"
-	OSRelease=" Personal"
+	Hostname="DESKTOP-KAI9EHV"
+	OSRelease=" Professional"
 	OSVersion=" (Build 22621)"
 	OSPlatform="AMD64"
 	Is64Bits="1"
-	VendorString=""
-	VendorID="Unknown Manufacturer"
-	FamilyID="0"
-	ModelID="0"
-	ProcessorCacheSize="0"
-	NumberOfLogicalCPU="8"
-	NumberOfPhysicalCPU="4"
-	TotalVirtualMemory="32601"
-	TotalPhysicalMemory="16217"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="15"
+	ModelID="1"
+	ProcessorCacheSize="64"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="23712"
+	TotalPhysicalMemory="16288"
 	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="1992"
+	ProcessorClockFrequency="3693"
 	>
 	<Testing>
-		<StartDateTime>Jun 14 23:47 Pacific Daylight Time</StartDateTime>
-		<StartTestTime>1686811638</StartTestTime>
+		<StartDateTime>Jun 15 06:37 Pacific Daylight Time</StartDateTime>
+		<StartTestTime>1686836266</StartTestTime>
 		<TestList/>
-		<EndDateTime>Jun 14 23:47 Pacific Daylight Time</EndDateTime>
-		<EndTestTime>1686811638</EndTestTime>
+		<EndDateTime>Jun 15 06:37 Pacific Daylight Time</EndDateTime>
+		<EndTestTime>1686836266</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

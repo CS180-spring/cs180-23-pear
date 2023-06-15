@@ -8,4 +8,7 @@ phone.cpp
 customer.cpp
 searcher.cpp
 plan.cpp
+jsonExport.cpp
+jsonImport.cpp
+sorter.cpp
 )

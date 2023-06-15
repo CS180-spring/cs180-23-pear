@@ -3,3 +3,7 @@ CMakeFiles/
 cmake_install.cmake
 Makefile
 lib/
+.vscode
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+.vscode/c_cpp_properties.json

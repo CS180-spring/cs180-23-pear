@@ -3,10 +3,9 @@
 We are implementing a database for a mobile service provider. The database offers the following functions to the user
 
 ## Main Menu
-1. Add a new customer // Need to change to customer file
-2. View customer information // Need to change to customer file
-3. Edit customer information // Need to change to customer file
-/*Work in Progress */
+1. Add a new customer
+2. View customer information
+3. Edit customer information
 4. Delete a customer
 5. Add a new phone
 6. View phone information
@@ -16,8 +15,9 @@ We are implementing a database for a mobile service provider. The database offer
 10. View phone plan information
 11. Edit phone plan information
 12. Delete a phone plan
-13. Purchase a phone
-14. Exit
+13. Sort customers by Plan ID or Payment Method
+14. Export current data to JSON file
+15. Exit
 
 ### Current Schema:
 
